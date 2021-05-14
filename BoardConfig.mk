@@ -107,7 +107,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 100663296
 BOARD_SUPER_PARTITION_SIZE := 8178892800
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 8178892800
-BOARD_SUPER_PARTITION_PARTITION_LIST := system vendor
+BOARD_SUPER_PARTITION_PARTITION_LIST := system system_ext product vendor odm
 
 # System as root
 BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist
@@ -185,6 +185,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage
 
 # Other flags
 TW_NO_LEGACY_PROPS := true
+TW_OVERRIDE_SYSTEM_PROPS := "ro.build.version.sdk" #needed for Android 11 Gapps
 TW_NO_SCREEN_BLANK := true
 TARGET_SUPPORTS_64_BIT_APPS := true
 TARGET_USES_64_BIT_BINDER := true
