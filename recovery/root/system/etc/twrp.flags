@@ -10,7 +10,7 @@
 
 # Modem Backup
 /firmware       vfat    /dev/block/sde4                            flags=display="Firmware";mounttodecrypt;fsflags=ro
-/modem_image    emmc    /dev/block/sde4                            flags=display="Modem";flashimg;backup=1
+/modem_image    emmc    /dev/block/sde4                            flags=display="Modem";backup=1
 
 # Firmware-update partitions
 /abl            emmc    /dev/block/sde8                            flags=display="Firmware-update";backup=1
