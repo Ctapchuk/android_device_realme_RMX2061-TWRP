@@ -23,11 +23,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Use twrp-common for decryption
-BOARD_USES_QCOM_FBE_DECRYPTION := true
+#BOARD_USES_QCOM_FBE_DECRYPTION := true
 
-PRODUCT_PACKAGES_ENG += \
-    qcom_decrypt \
-    qcom_decrypt_fbe
+#PRODUCT_PACKAGES_ENG += \
+#    qcom_decrypt \
+#    qcom_decrypt_fbe
 
 # Fastbootd stuff
 PRODUCT_PACKAGES += \
