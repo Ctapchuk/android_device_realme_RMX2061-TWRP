@@ -33,6 +33,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     android.hardware.fastboot@1.0-impl-mock.recovery   
+# realme otacert
+PRODUCT_EXTRA_RECOVERY_KEYS += \
+    $(LOCAL_PATH)/security/realme.special_OTA \
+    $(LOCAL_PATH)/security/realme.local_OTA
 
 # Take a few libraries from sources
 TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
