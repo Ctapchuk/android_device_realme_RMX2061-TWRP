@@ -4,6 +4,12 @@
 
 # mount_point  fstype   device            device2                  flags
 
+/system_root    ext4    /dev/block/mapper/system                   flags=removable
+/system_ext     ext4    /dev/block/mapper/system_ext               flags=removable
+/product        ext4    /dev/block/mapper/product                  flags=removable
+/vendor         ext4    /dev/block/mapper/vendor                   flags=removable
+/odm            ext4    /dev/block/mapper/odm                      flags=removable
+
 /boot           emmc    /dev/block/sde11
 /dtbo           emmc    /dev/block/sde19                           flags=display="Dtbo";flashimg;backup=1
 /recovery       emmc    /dev/block/sde23                           flags=display="Recovery";flashimg;backup=1
@@ -35,7 +41,7 @@
 /xbl            emmc    /dev/block/sdb1                            flags=backup=1;subpartitionof=/abl
 /xbl_config     emmc    /dev/block/sdb2                            flags=backup=1;subpartitionof=/abl
 
-#/storage        ext4    /data/media/0                              flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
+/storage        ext4    /data/media/0                              flags=display="Internal Storage";backup=1;removable;usermrf;fsflags="bind,utf8"
 /persist        ext4    /dev/block/sda2                            flags=display="Persist"
 /persist_image  emmc    /dev/block/sda2                            flags=display="Persist";flashimg;backup=1
 /vbmeta         emmc    /dev/block/sde18                           flags=display="Vbmeta";flashimg;backup=1
