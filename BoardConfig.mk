@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/RMX2061
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
@@ -115,9 +113,6 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
-# Use mke2fs to create ext4 images
-TARGET_USES_MKE2FS := true
-
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_PRODUCT := product
@@ -161,10 +156,6 @@ TW_INCLUDE_BASH := true
 TW_SKIP_COMPATIBILITY_CHECK := true
 TW_OZIP_DECRYPT_KEY := 0000
 
-# Include some file system support
-TW_INCLUDE_FUSE_NTFS := true
-TW_INCLUDE_FUSE_EXFAT := true
-
 # Use Toolbox instead of Busybox
 TW_USE_TOOLBOX := true 
 
@@ -187,5 +178,5 @@ TW_NO_LEGACY_PROPS := true
 TW_OVERRIDE_SYSTEM_PROPS := "ro.build.version.sdk" #needed for Android 11 Gapps
 TW_NO_SCREEN_BLANK := true
 TARGET_SUPPORTS_64_BIT_APPS := true
-TARGET_USES_64_BIT_BINDER := true
+
 #

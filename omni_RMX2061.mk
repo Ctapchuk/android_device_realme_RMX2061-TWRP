@@ -16,6 +16,8 @@
 
 # Release name
 PRODUCT_RELEASE_NAME := RMX2061
+DEVICE_PATH := device/realme/RMX2061
+
 $(call inherit-product, device/realme/RMX2061/device.mk)
 
 # Inherit some common TWRP stuff.
@@ -29,7 +31,4 @@ PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme 6 Pro
 PRODUCT_MANUFACTURER := realme
 
-# HACK: Set vendor patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2099-12-31
 #
