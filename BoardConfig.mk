@@ -150,6 +150,7 @@ TW_EXCLUDE_TWRPAPP := true
 TW_HAS_EDL_MODE := true
 
 # Include some binaries
+TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_BASH := true
