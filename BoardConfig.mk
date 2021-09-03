@@ -27,7 +27,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
-
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
@@ -90,7 +89,6 @@ TARGET_OTA_ASSERT_DEVICE := RMX2061
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
-    --prop com.android.build.recovery.fingerprint:$(BUILD_FINGERPRINT_FROM_FILE) \
     --prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
     --prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
@@ -119,7 +117,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
