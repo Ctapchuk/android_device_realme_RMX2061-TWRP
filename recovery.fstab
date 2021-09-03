@@ -12,7 +12,7 @@ system_ext                             /system_ext   ext4    ro,barrier=1,discar
 product                                /product      ext4    ro,barrier=1,discard                                                               wait
 vendor                                 /vendor       ext4    ro,barrier=1,discard                                                               wait
 odm                                    /odm          ext4    ro,barrier=1,discard                                                               wait
-/dev/block/bootdevice/by-name/cache    /cache        ext4    nosuid,noatime,nodev                                                               defaults,backup=0
+/dev/block/by-name/cache               /cache        ext4    noatime,nosuid,nodev,barrier=1,data=ordered                                        wait,check,first_stage_mount,backup=0
 /dev/block/bootdevice/by-name/userdata /data         f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt   latemount,wait,resize,check,formattable,fileencryption=ice,wrappedkey,quota,reservedsize=128M,checkpoint=fs
 /dev/block/bootdevice/by-name/misc     /misc         emmc    defaults                                                                           defaults
 
