@@ -174,4 +174,7 @@ TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone4/temp"
 TW_NO_LEGACY_PROPS := true
 TW_OVERRIDE_SYSTEM_PROPS := "ro.build.version.sdk" #needed for Android 11 Gapps
 
+# Make TWRP bootable in Android 12 GSI
+TW_EXCLUDE_APEX := true
+
 #
