@@ -168,7 +168,6 @@ TW_EXTRA_LANGUAGES := true
 # Set custom paths
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone4/temp"
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
 
 # Other flags
 TW_NO_LEGACY_PROPS := true
