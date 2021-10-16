@@ -2,7 +2,7 @@ TeamWin Recovery Project (TWRP) 3.5.x for realme 6 Pro (RMX2061/3)
 ======================================
 
 # How to build
-Check out the guide for building with minimal sources https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni/tree/twrp-10.0
+Check out the guide for building with minimal sources https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp/tree/twrp-11
 
 # Device specifications
 

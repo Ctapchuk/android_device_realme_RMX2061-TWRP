@@ -88,9 +88,6 @@ TARGET_OTA_ASSERT_DEVICE := RMX2061
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
-BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
-    --prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
-    --prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
@@ -129,9 +126,6 @@ VENDOR_SECURITY_PATCH := 2099-12-31
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 
-# Add sepolicy for fixing binderfs mounting with android-10 sources
-include $(DEVICE_PATH)/sepolicy/sepolicy.mk
-
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
@@ -144,9 +138,6 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2048
 TW_DEFAULT_BRIGHTNESS := 1200
-
-# Remove trash
-TW_EXCLUDE_TWRPAPP := true
 
 # Qcom EDL mode
 TW_HAS_EDL_MODE := true

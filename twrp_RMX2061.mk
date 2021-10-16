@@ -21,12 +21,14 @@ DEVICE_PATH := device/realme/RMX2061
 $(call inherit-product, device/realme/RMX2061/device.mk)
 
 # Inherit some common TWRP stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+# Inherit from common AOSP config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX2061
-PRODUCT_NAME := omni_RMX2061
+PRODUCT_NAME := twrp_RMX2061
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme 6 Pro
 PRODUCT_MANUFACTURER := realme
