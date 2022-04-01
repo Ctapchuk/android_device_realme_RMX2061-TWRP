@@ -1,4 +1,4 @@
-TeamWin Recovery Project (TWRP) 3.5.x for realme 6 Pro (RMX2061/3)
+TeamWin Recovery Project (TWRP) 3.6.x for realme 6 Pro (RMX2061/3)
 ======================================
 
 # How to build

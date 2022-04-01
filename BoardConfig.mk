@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The Android Open Source Project
+# Copyright (C) 2022 TeamWin Recovery Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,6 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+DEVICE_PATH := device/realme/RMX2061
 
 # Architecture
 TARGET_ARCH := arm64
@@ -121,10 +123,15 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
 # Crypto
+PLATFORM_VERSION := 127
 PLATFORM_SECURITY_PATCH := 2127-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-#TW_INCLUDE_CRYPTO := true
-#TW_INCLUDE_CRYPTO_FBE := true
+BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+BOARD_USES_QCOM_FBE_DECRYPTION := true
+TW_USE_FSCRYPT_POLICY := 1
+PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -134,10 +141,11 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_NTFS_3G := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_NO_SCREEN_BLANK := true
+TW_DELAY_TOUCH_INIT_MS := 5000
 
 # Set brightness path and level
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
-TW_MAX_BRIGHTNESS := 2048
+TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 
 # Qcom EDL mode
@@ -152,9 +160,6 @@ TW_INCLUDE_BASH := true
 # Fix stock .ozip installation
 TW_SKIP_COMPATIBILITY_CHECK := true
 TW_OZIP_DECRYPT_KEY := 0000
-
-# Use Toolbox instead of Busybox
-TW_USE_TOOLBOX := true 
 
 # Debug-tools
 TWRP_INCLUDE_LOGCAT := true
@@ -171,10 +176,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone4/temp"
 
 # Other flags
-TW_NO_LEGACY_PROPS := true
-TW_OVERRIDE_SYSTEM_PROPS := "ro.build.version.sdk" #needed for Android 11 Gapps
-
-# Make TWRP bootable in Android 12 GSI
+TW_OVERRIDE_SYSTEM_PROPS := "ro.build.version.sdk"
 TW_EXCLUDE_APEX := true
 
 #

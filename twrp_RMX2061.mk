@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 TeamWin Recovery Project
+# Copyright (C) 2022 TeamWin Recovery Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,8 +16,6 @@
 
 # Release name
 PRODUCT_RELEASE_NAME := RMX2061
-DEVICE_PATH := device/realme/RMX2061
-
 $(call inherit-product, device/realme/RMX2061/device.mk)
 
 # Inherit some common TWRP stuff.
@@ -32,5 +30,4 @@ PRODUCT_NAME := twrp_RMX2061
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme 6 Pro
 PRODUCT_MANUFACTURER := realme
-
 #
